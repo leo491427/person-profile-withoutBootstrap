@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    background-image: url("../img/main_bg.png");
+    background-repeat: no-repeat;
+    /* 为什么没有下面这行image不能显示？ */
+    background-color: rgba(128, 128, 128, 0.2);  
+    background-size: cover;
+}
+
+header {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(64, 64, 64);
+}
+
+header .person-name {
+    font-size: 1.618em;
+}
+
+header .person-name span{
+    color: rgb(0, 189, 0);
+}
+
+
+
+nav li {
+    display: inline-block;
+    padding: 10px 10px;
+    margin: auto 0;
+    font-size: 1em;
+
+}
+
+nav li .active-page {
+    background-color: rgba(196, 196, 196, 0.8);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    transition: 0.2s padding ease-in, 0.2s color ease-in, 0.2s background ease-in;
+}
+nav li a:hover {
+    /* font-size: 1.1em; */
+    color: black;
+    padding: 10px 5px;
+    border-radius: 5px;
+    background: white;
+}
+
+nav li .active-page:hover {
+    font-size: 1em;
+    background-color: rgba(196, 196, 196, 0.8);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+section {
+
+    border-radius: 20px;
+    border-radius: 20px;
+
+}
+section {
+    width: 80%;
+    margin: auto;
+
+}
+
+section .person-info--profile {
+
+    height: 300px;
+    width: 100%;
+    background: rgba(0, 196, 0, 0.4);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+section .avatar {
+    flex-basis: 50%;
+    height: auto;
+    z-index:1;
+}
+
+section .avatar img {
+    width: 50%;
+    min-width: 256px;
+    /* transition: 0.4s ease-out; */
+    margin: 0 10% -15%;
+
+}
+
+section .avatar img:hover {
+    /* transition: 0.4s ease-in; */
+    -webkit-animation: 1s upndown 1;
+    animation: 1s upndown 1;
+    /* margin: 0 10% -10%; */
+}
+
+@-webkit-keyframes upndown {
+    0% {margin: 0 10% -15%;}
+    50% {margin: 0 10% -10%; box-shadow: 6px 12px 12px 5px rgba(0, 0, 0, 0.2);}
+    100% {margin: 0 10% -15%;}
+}
+
+@keyframes upndown {
+    0% {margin: 0 10% -15%;}
+    50% {margin: 0 10% -10%; box-shadow: 6px 12px 12px 5px rgba(0, 0, 0, 0.2);}
+    100% {margin: 0 10% -15%;}
+}
+
+
+section .title {
+    position: relative;
+    flex-basis: 50%;
+    text-align: center;
+    padding-right: 12%;
+    color: white;
+    line-height: 1.5em;
+}
+
+section .title h2 {
+    font-size: 2.618em;
+    margin-bottom: 0%;
+}
+
+section .title p {
+    font-size: 1.618em;
+
+}
+
+section .socialmedia-link .fab {
+    width: 36px;
+    height: 36px;
+    color: grey;
+    background-color: white;
+    border-radius: 100%;
+    font-size: 1em;
+    text-align: center;
+    padding-top: 10px; 
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+section .profile-info--details {
+    height: 300px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 50px 5px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+ 
+}
+
+section .about-me {
+    flex-basis: 50%;
+
+    font-size: 1em;
+    padding: 5%; 
+}
+
+section .about-me h4 {
+    font-size: 1.618em;
+}
+
+section .about-me h4 span {
+    color: rgb(0, 189, 0);
+}
+
+section .contact-info {
+    flex-basis: 50%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5% 0; 
+
+    list-style-type:none;
+}
+
+section .contact-info li {
+    padding-right: 20px;
+}
+
+section .contact-info li:nth-child(2n+1) {
+    grid-column: 1 / 2;
+    font-size: 1em;
+    color: black;
+    text-align: left;
+}
+section .contact-info li:nth-child(2n) {
+    grid-column: 2 / 3;
+    font-size: 1em;
+    color: gray;
+}
+
+/* 为什么实际上换行wrap时并不是768宽度？ */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    header .person-name {
+        flex-basis: 100%;
+    }
+
+    header .navigtor {
+        flex-basis: 100%;
+        margin-top: 0;
+        margin-bottom: 25px
+    }
+    
+    section .person-info--profile {
+        position: relative;
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section .avatar {
+        flex-basis: 100%;
+        /* margin: auto; */
+        position: absolute;
+        top: 0;
+
+    }
+
+    section .avatar img {
+        max-width: 256px;
+        /* transition: 0.4s ease-out; */
+        /* margin-left:25%; */
+        display: block;
+        margin: 5% auto 0 auto;        
+    }
+
+    section .avatar img:hover {
+        /* transition: 0.4s ease-in; */
+        -webkit-animation: 1s upndown 1;
+        animation: 1s upndown 1;
+        /* margin: 0 10% -10%; */
+    }
+    
+    @-webkit-keyframes upndown {
+        0% {margin-top: 5%;}
+        50% {margin-top: 0%;; box-shadow: 6px 12px 12px 5px rgba(0, 0, 0, 0.2);}
+        100% {margin-top: 5%;}
+    }
+    
+    @keyframes upndown {
+        0% {margin-top: 5%;}
+        50% {margin-top: 0%;; box-shadow: 6px 12px 12px 5px rgba(0, 0, 0, 0.2);}
+        100% {margin-top: 5%;}
+    }
+
+    section .title {
+        position: absolute;
+        top: 60%;
+        flex-basis: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    section .profile-info--details {
+        height: 450px;
+        width: 100%;
+        align-content: flex-start;
+    }
+
+    section .about-me {
+        flex-basis: 100%;    
+        padding: 0 5%; 
+    }
+
+    section .contact-info {
+        flex-basis: 100%;
+        height: 200px;
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 5% 5%;
+        list-style-type:none;
+    }
+    
+
+}
+
+footer {
+    margin: 25px;
+}
+footer p {
+    text-align: center;
+    font-size: 1em;
+    color: grey;
+}

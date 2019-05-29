@@ -1,0 +1,208 @@
+html {
+    font-size: 10px;
+    background: url("../img/main_bg.png") no-repeat;
+    /* background-image: url("../img/main_bg.png");
+    background-repeat: no-repeat;
+    /* 为什么没有下面这行image不能显示？ */
+    background-color: rgba(128, 128, 128, 0.2);
+    width: 80%;
+    margin: 0 auto;
+}
+
+body>header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(64, 64, 64);
+}
+
+body>header .person-name {
+    font-size: 2.6rem;
+}
+
+.font--green {
+    color: rgb(0, 189, 0);
+}
+
+body>header li {
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 10px 10px;
+}
+
+body>header .active-page {
+    background-color: rgba(196, 196, 196, 0.8);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+body>header a {
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    transition: 0.2s padding ease-in, 0.2s color ease-in, 0.2s background ease-in;
+}
+
+body>header a:hover {
+    /* font-size: 1.1em; */
+    color: black;
+    padding: 5px 5px;
+    border-radius: 5px;
+    background: white;
+}
+
+body>header .active-page:hover {
+    font-size: 1.6rem;
+    background-color: rgba(196, 196, 196, 0.8);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+#contact>header {
+    margin: 0;
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+    color: #fff;
+    font-size: 3.2rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#contact>header>h2 {
+    margin: 0;
+    font-size: 3.2rem;
+}
+
+.background--green {
+    background-color: rgba(0, 196, 0, 0.5)
+}
+
+.font--green {
+    color: rgb(0, 189, 0);
+}
+
+.background--white {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.flex-item--2 {
+    flex-basis: 50%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+
+#contact>div {
+    padding: 20px 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#get-in-touch>h4,#contact-form>h4 {
+    margin: 0;
+    padding: 20px;
+    font-size: 2.4rem;
+}
+
+#google-map {
+
+    margin: 10px;
+}
+
+#get-in-touch ul {
+    padding: 20px 20px;
+    list-style-type: none;
+}
+
+#get-in-touch li {
+    padding: 10px;
+    font-size: 1.6rem;
+    
+}
+
+#get-in-touch i{
+
+    text-align: center;
+    padding-right: 20px;
+    font-size: 1.6rem;
+}
+
+.form-item {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.6rem;
+    max-width: 400px;
+    /* background: #fff; */
+}
+
+.form-item>input,textarea {
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    width: 90%;
+    margin-left: 20px;
+    font-size: 1.6rem;
+    line-height: 250%;
+}
+
+#contact-form i
+{
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+#contact-form input:focus+i {
+    color: rgb(0, 189, 0);
+    transition: 0.2s color linear;
+}
+
+#contact-form textarea:focus+i {
+    color: rgb(0, 189, 0);
+    transition: 0.2s color linear;
+}
+
+#submit {
+    height: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    body>header {
+        flex-wrap: wrap;
+    }
+
+    body>header .person-name {
+        flex-basis: 100%;
+    }
+
+    body>header .navigtor {
+        flex-basis: 100%;
+        margin-top: 0;
+        margin-bottom: 25px
+    }
+    
+    .flex-item--2 {
+        flex-basis: 100%;
+        box-sizing: border-box;
+        padding: 10px 15px;
+    }
+
+}
+
+footer {
+    margin: 25px;
+}
+footer p {
+    text-align: center;
+    font-size: 1em;
+    color: grey;
+}

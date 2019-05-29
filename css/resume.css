@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    /* margin: 0; */
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    background-image: url("../img/main_bg.png");
+    background-repeat: no-repeat;
+    /* 为什么没有下面这行image不能显示？ */
+    background-color: rgba(128, 128, 128, 0.2);  
+    /* background-size: cover; */
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+body>header {
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(64, 64, 64);
+}
+
+body>header .person-name {
+    font-size: 1.618em;
+}
+
+body>header .person-name span{
+    color: rgb(0, 189, 0);
+}
+
+body>header nav li {
+    display: inline-block;
+    padding: 10px 10px;
+    margin: auto 0;
+    font-size: 1em;
+
+}
+
+body>header nav li .active-page {
+    background-color: rgba(196, 196, 196, 0.8);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+body>header nav li a {
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    transition: 0.2s padding ease-in, 0.2s color ease-in, 0.2s background ease-in;
+}
+
+body>header nav li a:hover {
+    /* font-size: 1.1em; */
+    color: black;
+    padding: 10px 5px;
+    border-radius: 5px;
+    background: white;
+}
+
+body>header nav li .active-page:hover {
+    font-size: 1em;
+    background-color: rgba(196, 196, 196, 0.8);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+section > header > h1 {
+    margin: 0;
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+    color: #fff;
+    font-size: 2rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: rgba(0, 196, 0, 0.5)
+}
+
+body > section {
+    padding: 0 0 40px 0;
+    margin: 0 0 40px 0;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+
+}
+section > section {
+
+    padding: 0 20px 40px 20px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+
+}
+
+section > section > aside {
+    flex-basis: 50%;
+    padding: 20px;
+    border-left: 1px solid #ccc
+}
+
+
+section > section > aside > article {
+    position: relative;
+    margin: 15px 0 15px 20px;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-left: 3px solid #0c0;
+}
+
+section > section > aside > article  p, h4
+{
+    margin: 8px;
+}
+
+section > section > aside > article  p
+{
+    font-size: 0.8rem;
+}
+
+section > section > aside > article span {
+    color: #999;
+    font-size: 0.618rem;
+}
+
+section > section > aside > article span:first-child {
+    color: #0c0;
+}
+
+/* 以下语句在什么情况下使用？ */
+.resume-card::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 8px;
+    height: 8px;
+    top: 20px;
+    left: -48px;
+    border: 2px solid #2eca7f;
+    z-index: 2;
+  }
+
+/* 以下语句在什么情况下使用？ */
+.resume-card::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background-color: #2eca7f;
+    border-radius: 1px;
+    width: 40px;
+    height: 2px;
+    top: 25px;
+    left: -40px;
+    z-index: 1;
+}
+
+section > section > aside p{
+    margin: 4px;
+    font-size: 0.8rem;
+}
+
+section > section > aside progress {
+    width: 80%;
+    height: 12px;
+    background-color: #ccc;
+    /* background: #ccc; */
+}
+
+section > section > aside .skill-max {
+    width: 100%;
+    height: 12px;
+    border: 1px solid #ccc;
+}
+
+section > section > aside #skill--html5 {
+    width: 90%;
+    height: 12px;
+    background-color: #0c0;
+}
+
+section > section > aside #skill--css3-less-sass {
+    width: 80%;
+    height: 12px;
+    background-color: #0c0;
+}
+
+section > section > aside #skill--jquery {
+    width: 80%;
+    height: 12px;
+    background-color: #0c0;
+}
+
+section > section > aside #skill--web-design {
+    width: 80%;
+    height: 12px;
+    background-color: #0c0;
+}
+
+section > section > aside #skill--graphic-design {
+    width: 70%;
+    height: 12px;
+    background-color: #0c0;
+}
+
+section > section > aside #skill--print-design {
+    width: 60%;
+    height: 12px;
+    background-color: #0c0;
+}
+
+/* 为什么实际上换行wrap时并不是768宽度？ */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    header .person-name {
+        flex-basis: 100%;
+    }
+
+    header .navigtor {
+        flex-basis: 100%;
+        margin-top: 0;
+        margin-bottom: 25px
+    }
+    
+    section > section > aside {
+        flex-basis: 100%;
+        padding: 20px;
+        border-left: 1px solid #ccc
+    }
+
+    
+}
+
+footer {
+    margin: 25px;
+}
+footer p {
+    text-align: center;
+    font-size: 1em;
+    color: grey;
+}
